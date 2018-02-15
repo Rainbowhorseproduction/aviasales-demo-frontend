@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import Category from "./Category.js";
 import compass from "./compass.svg";
 import edit from "./edit.svg";
-import categoryIconBack from "./categoryIconBack.svg";
 import world from "./world.svg";
 import three from "./three.svg";
 import bag from "./bag.svg";
+import building from "./building.svg";
+import coctail from "./coctail.svg";
+import stroller from "./stroller.svg";
 
 const TopDestinations = styled.div`
   background: #f8fcff;
@@ -48,49 +51,19 @@ const EditIcon = styled.img`
 `;
 
 const Categories = styled.div`
-  magin-top: 32px;
-  flex-wrap: wrap;
   display: flex;
+  flex-wrap: wrap;
+  magin-top: 32px;
+  margin-bottom: 16px;
 `;
 
-const Category = styled.div`
-  box-sizing: border-box;
-  cursor: pointer;
-
-  &:hover {
-    border-bottom: 1px solid #00ace2;
-  }
+const Col = styled.div`
+  width: 33.33%;
+  display: flex;
+  justify-content: space-around;
 `;
 
-const CategoryIconContainer = styled.div`
-  position: relative;
-  text-align: center;
-  margin-top: 32px;
-`;
-
-const CategoryIconBack = styled.img``;
-
-const CategoryIcon = styled.img`
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  left: calc(50% - 11px);
-  top: calc(50% - 13px);
-`;
-
-const CategoryLabel = styled.p`
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 20px;
-  font-size: 12px;
-  text-align: center;
-  color: #5c5c5c;
-  margin-top: 12px;
-  margin-bottom: 2px;
-`;
-
-export default function() {
+export default function(props) {
   return (
     <TopDestinations>
       <Compass src={compass} alt="compass" />
@@ -99,15 +72,24 @@ export default function() {
         Москва<EditIcon src={edit} alt="pencil icon" />
       </CityButton>
       <Categories>
-        <Category>
-          <CategoryIconContainer>
-            <CategoryIconBack src={categoryIconBack} alt="icon back" />
-            <CategoryIcon src={world} alt="world icon" />
-          </CategoryIconContainer>
-          <CategoryLabel>
-            КУДА<br />УГОДНО
-          </CategoryLabel>
-        </Category>
+        <Col xs={4}>
+          <Category icon={world} label={"КУДА УГОДНО"} />
+        </Col>
+        <Col xs={4}>
+          <Category icon={three} label={"CОЛНЦЕ И МОРЕ"} />
+        </Col>
+        <Col xs={4}>
+          <Category icon={bag} label={"ШОПИНГ, ГОРОД"} />
+        </Col>
+        <Col xs={4}>
+          <Category icon={building} label={"КУЛЬТУРА И ИСТОРИЯ"} />
+        </Col>
+        <Col xs={4}>
+          <Category icon={coctail} label={"НОЧНАЯ ЖИЗНЬ"} />
+        </Col>
+        <Col xs={4}>
+          <Category icon={stroller} label={"ОТДЫХ С ДЕТЬМИ"} />
+        </Col>
       </Categories>
     </TopDestinations>
   );

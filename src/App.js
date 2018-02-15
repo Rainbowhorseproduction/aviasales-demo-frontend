@@ -1,9 +1,14 @@
 import React, { Component } from "react";
-import Header from "./Header";
-import TopDestinations from "./TopDestinations";
 import "normalize.css";
 import "./fonts/index.css";
 import "./App.css";
+import Header from "./Header";
+import CityAdvertisings from "./CityAdvertisings";
+import TopDestinations from "./TopDestinations";
+import TicketPrices from "./TicketPrices";
+import SpecialOffers from "./SpecialOffers";
+import BuyAdvices from "./BuyAdvices";
+import MobileApp from "./MobileApp";
 
 class App extends Component {
   render() {
@@ -11,6 +16,11 @@ class App extends Component {
       <div className="App">
         <Header />
         <TopDestinations />
+        <CityAdvertisings />
+        <TicketPrices />
+        <SpecialOffers />
+        <BuyAdvices />
+        <MobileApp />
       </div>
     );
   }

@@ -1,0 +1,95 @@
+import React from "react";
+import styled from "styled-components";
+import CityCard from "./CityCard";
+import PriceLine from "./PriceLine";
+import calendar from "./calendar.svg";
+import flagRu from "./flagRu.svg";
+
+const Tickets = styled.div`
+  background: linear-gradient(180deg, #f8fcff 0%, #ffffff 100%);
+  text-align: center;
+  padding: 32px 6px;
+`;
+
+const Calendar = styled.img``;
+
+const Title = styled.p`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 18px;
+  text-align: center;
+  color: #4a4a4a;
+  margin-top: 20px;
+`;
+
+const PriceComparison = styled.p`
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 16px;
+  text-align: center;
+  color: #4a4a4a;
+  margin: 0;
+  margin-bottom: 24px;
+`;
+
+const PriceOffer = styled.p`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #a0b0b9;
+  margin: 0;
+  padding-bottom: 8px;
+`;
+
+const CardBorder = styled.div`
+  border-bottom: 1px dashed #e4e7e8;
+`;
+
+export default function(props) {
+  return (
+    <Tickets>
+      <Calendar src={calendar} alt="calendar" />
+      <Title>Лучшие цены на авиабилеты за последний месяц</Title>
+      <CityCard city={"Симферополь(Крым)"} country={"КРЫМ"} flag={flagRu}>
+        <PriceLine name={"Из Москвы"} price={4813} />
+        <PriceLine name={"Из Санкт-Перербурга"} price={7857} />
+        <PriceLine name={"Из Новосибирска"} price={15127} />
+        <PriceLine name={"Из Екатеринбурга"} price={9275} />
+        <PriceLine name={"Из Челябинска"} price={9148} />
+      </CityCard>
+      <CardBorder />
+      <CityCard city={"Ереван"} country={"Армения"} flag={flagRu}>
+        <PriceLine name={"Из Москвы"} price={6758} />
+        <PriceLine name={"Из Санкт-Перербурга"} price={9932} />
+        <PriceLine name={"Из Сочи"} price={11951} />
+        <PriceLine name={"Из Краснодара"} price={11741} />
+        <PriceLine name={"Из Ростова-на-Дону"} price={11956} />
+      </CityCard>
+      <CardBorder />
+      <CityCard city={"Кишинёв"} country={"Молдавия"} flag={flagRu}>
+        <PriceLine name={"Из Москвы"} price={8319} />
+        <PriceLine name={"Из Санкт-Перербурга"} price={10800} />
+        <PriceLine name={"Из Краснодара"} price={12098} />
+        <PriceLine name={"Из Сургута"} price={16277} />
+        <PriceLine name={"Из Нового Уренгоя"} price={15987} />
+      </CityCard>
+      <PriceComparison>
+        Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран
+        мира. Поиск и сравнение цен на авиабилеты среди 100 агентств и 728
+        авиакомпаний.
+      </PriceComparison>
+      <PriceOffer>
+        Цены, найденные пользователями за последние 48 часов, не являются
+        офертой.
+      </PriceOffer>
+    </Tickets>
+  );
+}

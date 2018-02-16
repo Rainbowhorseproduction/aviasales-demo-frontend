@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const CityCard = styled.div`
-  padding: 0px 6px 12px 6px;
   background: #ffffff;
   box-shadow: 0px 2px 12px rgba(0, 75, 93, 0.12);
   border-radius: 8px;
+  margin-top: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
 `;
 
 const Col = styled.div`
@@ -14,6 +16,8 @@ const Col = styled.div`
 
 const CityView = styled.img`
   width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 `;
 
 const MainInfo = styled.div`
@@ -23,6 +27,7 @@ const MainInfo = styled.div`
 const DirectionInfo = styled.div`
   margin-left: 16px;
   margin-top: 8px;
+  margin-bottom: 12px;
 `;
 
 const CityName = styled.p`

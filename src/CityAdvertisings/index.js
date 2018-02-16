@@ -9,7 +9,9 @@ import simferopole from "./simferopole.svg";
 import barcelona from "./barcelona.svg";
 
 const CityAdvertisings = styled.div`
-  padding-bottom: 28px;
+  background: #f8fcff;
+  padding-bottom: 40px;
+  padding-top: 1px;
 `;
 
 export default () => (

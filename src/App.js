@@ -9,6 +9,7 @@ import TicketPrices from "./TicketPrices";
 import SpecialOffers from "./SpecialOffers";
 import BuyAdvices from "./BuyAdvices";
 import MobileApp from "./MobileApp";
+import Footer from "./Footer";
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
         <SpecialOffers />
         <BuyAdvices />
         <MobileApp />
+        <Footer />
       </div>
     );
   }

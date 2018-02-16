@@ -3,9 +3,10 @@ import styled from "styled-components";
 import categoryIconBack from "./categoryIconBack.svg";
 
 const Category = styled.div`
-  box-sizing: border-box;
   cursor: pointer;
   width: 64px;
+  border-bottom: 1px solid transparent;
+
   &:hover {
     border-bottom: 1px solid #00ace2;
   }

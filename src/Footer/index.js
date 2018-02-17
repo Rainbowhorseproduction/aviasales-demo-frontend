@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "./Button";
-import MobileCard from "./MobileCard";
+import Card from "./Card";
 import vk from "./vk.svg";
 import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
@@ -115,6 +114,20 @@ const FooterCopy = styled.p`
   text-align: center;
 `;
 
+const Button = styled.button`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 12px;
+  color: #4a4a4a;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-top: 4px;
+  padding: 0;
+`;
+
 export default function(props) {
   return (
     <Footer>
@@ -127,7 +140,7 @@ export default function(props) {
           <Line>Кипр</Line>
           <Line>Болгария</Line>
           <Line>Грузия</Line>
-          <Button>Все страны</Button>
+          <Button>Все страны →</Button>
         </FaQ>
         <FaQ>
           <Title>ГОРОДА</Title>
@@ -137,7 +150,7 @@ export default function(props) {
           <Line>Адлер</Line>
           <Line>Екатеринбург</Line>
           <Line>Лондон</Line>
-          <Button>Все городр</Button>
+          <Button>Все города →</Button>
         </FaQ>
         <FaQ>
           <Title>АВИАКОМПАНИИ</Title>
@@ -147,7 +160,7 @@ export default function(props) {
           <Line>Air Baltic</Line>
           <Line>Emirates</Line>
           <Line>KLM</Line>
-          <Button>Все авиакомпании</Button>
+          <Button>Все авиакомпании →</Button>
         </FaQ>
         <FaQ>
           <Title>АЭРОПОРТЫ</Title>
@@ -157,7 +170,7 @@ export default function(props) {
           <Line>Толмачево</Line>
           <Line>Владивосток</Line>
           <Line>Гамбург</Line>
-          <Button>Все аэропорты</Button>
+          <Button>Все аэропорты →</Button>
         </FaQ>
         <FaQ>
           <Title>НАПРАВЛЕНИЯ</Title>
@@ -194,11 +207,11 @@ export default function(props) {
         </span>
       </PartnerInfo>
       <FooterLinksList>
-        <MobileCard oslink={vk} name={"Вконтакте"} />
-        <MobileCard oslink={facebook} name={"Фейсбук"} />
-        <MobileCard oslink={instagram} name={"Инстаграм"} />
-        <MobileCard oslink={twitter} name={"Твиттер"} />
-        <MobileCard oslink={viber} name={"Вайбер"} />
+        <Card oslink={vk} name={"Вконтакте"} />
+        <Card oslink={facebook} name={"Фейсбук"} />
+        <Card oslink={instagram} name={"Инстаграм"} />
+        <Card oslink={twitter} name={"Твиттер"} />
+        <Card oslink={viber} name={"Вайбер"} />
       </FooterLinksList>
       <EndBlock>
         <HotelLookLink>Поиск и бронирование отелей</HotelLookLink>

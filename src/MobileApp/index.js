@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import MobileCard from "./MobileCard";
+import Card from "./MobileCard";
 import star from "./star.svg";
 import phone from "./phone.png";
 import apple from "./apple.svg";
@@ -10,6 +10,10 @@ import halfStar from "./halfStar.png";
 
 const MobileApp = styled.div`
   background: linear-gradient(137.4deg, #00b0de 4.18%, #196ebd 104.18%);
+
+  @media (min-width: 1440px) {
+    padding: 0px 203px;
+  }
 `;
 
 const TitleBlock = styled.div`
@@ -63,7 +67,7 @@ const Phone = styled.img`
   margin-right: 15px;
 `;
 
-const Col = styled.div`
+const Cards = styled.div`
   width: 50%;
   margin-right: 8px;
 `;
@@ -84,11 +88,11 @@ export default function(props) {
       </TitleBlock>
       <AppLinks>
         <Phone src={phone} alt="telefon" />
-        <Col>
-          <MobileCard oslink={apple} name={"iPhone или iPad"} />
-          <MobileCard oslink={android} name={"Android"} />
-          <MobileCard oslink={wf} name={"Windows Phone"} />
-        </Col>
+        <Cards>
+          <Card oslink={apple} name={"iPhone или iPad"} />
+          <Card oslink={android} name={"Android"} />
+          <Card oslink={wf} name={"Windows Phone"} />
+        </Cards>
       </AppLinks>
     </MobileApp>
   );

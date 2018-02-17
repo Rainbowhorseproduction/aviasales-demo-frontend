@@ -55,6 +55,8 @@ const Delimiter = styled.div`
 
 const PartnerInfo = styled.div`
   padding-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const FooterLinksList = styled.ul`
@@ -194,17 +196,13 @@ export default function(props) {
       </Services>
       <Delimiter />
       <PartnerInfo>
-        <span>
-          <About>О компании</About>
-          <About>Партнёрская программа</About>
-          <br />
-          <About>Реклама</About>
-          <About>Вакансии</About>
-          <About>Помощь</About>
-          <About>Правила</About>
-          <br />
-          <About>White Label авиабилеты</About>
-        </span>
+        <About>О компании</About>
+        <About>Партнёрская программа</About>
+        <About>Реклама</About>
+        <About>Вакансии</About>
+        <About>Помощь</About>
+        <About>Правила</About>
+        <About>White Label авиабилеты</About>
       </PartnerInfo>
       <FooterLinksList>
         <Card oslink={vk} name={"Вконтакте"} />

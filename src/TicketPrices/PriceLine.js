@@ -4,7 +4,7 @@ import styled from "styled-components";
 const PriceLine = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-top: 16px;
 `;
 
 const Name = styled.p`

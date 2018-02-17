@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import AdviceCard from "./AdviceCard.js";
+import AdviceCard from "./AdviceCard";
 import plane from "./plane.svg";
 import dog from "./dog.svg";
 import list from "./list.svg";

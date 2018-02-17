@@ -1,9 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
+const CardWrapper = styled.div`
+  @media (min-width: 1440px) {
+    width: 33%;
+  }
+`;
+
 const CityCard = styled.div`
   text-align: left;
   padding: 24px 0px;
+  width: 100%;
+
+  @media (min-width: 1440px) {
+    padding: 0;
+  }
 `;
 
 const TitleBlock = styled.div`
@@ -12,9 +23,7 @@ const TitleBlock = styled.div`
 `;
 
 const Flag = styled.img`
-  width: 42px;
-  height: 42px;
-  margin-left: -6px;
+  margin-bottom: 12px;
 `;
 
 const Name = styled.p`
@@ -36,20 +45,21 @@ const Country = styled.p`
   font-size: 12px;
   color: #a0b0b9;
   margin-top: 2px;
-  margin-botttom: 0px;
 `;
 
 export default function(props) {
   return (
-    <CityCard>
-      <TitleBlock>
-        <Flag src={props.flag} alt="flag" />
-        <div>
-          <Name>{props.city}</Name>
-          <Country>{props.country}</Country>
-        </div>
-      </TitleBlock>
-      {props.children}
-    </CityCard>
+    <CardWrapper>
+      <CityCard>
+        <TitleBlock>
+          <Flag src={props.flag} alt="flag" />
+          <div>
+            <Name>{props.city}</Name>
+            <Country>{props.country}</Country>
+          </div>
+        </TitleBlock>
+        {props.children}
+      </CityCard>
+    </CardWrapper>
   );
 }

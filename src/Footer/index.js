@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "./Button.js";
-import MobileCard from "./MobileCard.js";
+import Button from "./Button";
+import MobileCard from "./MobileCard";
 import vk from "./vk.svg";
 import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
@@ -14,11 +14,14 @@ import windowsstore from "./windowsstore.svg";
 const Footer = styled.div`
   background: #ffffff;
   padding: 1px 6px 24px;
+`;
+
+const Services = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
 
-const ColTitle = styled.p`
+const Title = styled.p`
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -29,7 +32,7 @@ const ColTitle = styled.p`
   margin-bottom: 16px;
 `;
 
-const Col = styled.div`
+const FaQ = styled.div`
   width: 50%;
   margin-top: 31px;
   padding-bottom: 8px;
@@ -55,7 +58,7 @@ const PartnerInfo = styled.div`
   padding-top: 24px;
 `;
 
-const FooterLinksList = styled.div`
+const FooterLinksList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   text-align: left;
@@ -115,65 +118,67 @@ const FooterCopy = styled.p`
 export default function(props) {
   return (
     <Footer>
-      <Col>
-        <ColTitle>СТРАНЫ</ColTitle>
-        <Line>Россия</Line>
-        <Line>Тайланд</Line>
-        <Line>Черногория</Line>
-        <Line>Кипр</Line>
-        <Line>Болгария</Line>
-        <Line>Грузия</Line>
-        <Button>Все страны</Button>
-      </Col>
-      <Col>
-        <ColTitle>ГОРОДА</ColTitle>
-        <Line>Москва</Line>
-        <Line>Санкт-Петербург</Line>
-        <Line>Симферополь</Line>
-        <Line>Адлер</Line>
-        <Line>Екатеринбург</Line>
-        <Line>Лондон</Line>
-        <Button>Все городр</Button>
-      </Col>
-      <Col>
-        <ColTitle>АВИАКОМПАНИИ</ColTitle>
-        <Line>Air Berlin</Line>
-        <Line>Air France</Line>
-        <Line>Alitalia</Line>
-        <Line>Air Baltic</Line>
-        <Line>Emirates</Line>
-        <Line>KLM</Line>
-        <Button>Все авиакомпании</Button>
-      </Col>
-      <Col>
-        <ColTitle>АЭРОПОРТЫ</ColTitle>
-        <Line>Шереметьево</Line>
-        <Line>Курумоч</Line>
-        <Line>Домодедово</Line>
-        <Line>Толмачево</Line>
-        <Line>Владивосток</Line>
-        <Line>Гамбург</Line>
-        <Button>Все аэропорты</Button>
-      </Col>
-      <Col>
-        <ColTitle>НАПРАВЛЕНИЯ</ColTitle>
-        <Line>MOW - SIP</Line>
-        <Line>MOW - AER</Line>
-        <Line>MOW - TIV</Line>
-        <Line>MOW - MRV</Line>
-        <Line>LED - MOW</Line>
-        <Line>MOW - BKK</Line>
-      </Col>
-      <Col>
-        <ColTitle>СЕРВИСЫ</ColTitle>
-        <Line>Горящие авиабилеты</Line>
-        <Line>Календарь низких цен</Line>
-        <Line>Карта низких цен</Line>
-        <Line>Спецпредложения</Line>
-        <Line>Таблица цен</Line>
-        <Line>Блог</Line>
-        <Line>Помощь</Line>
-      </Col>
+      <Services>
+        <FaQ>
+          <Title>СТРАНЫ</Title>
+          <Line>Россия</Line>
+          <Line>Тайланд</Line>
+          <Line>Черногория</Line>
+          <Line>Кипр</Line>
+          <Line>Болгария</Line>
+          <Line>Грузия</Line>
+          <Button>Все страны</Button>
+        </FaQ>
+        <FaQ>
+          <Title>ГОРОДА</Title>
+          <Line>Москва</Line>
+          <Line>Санкт-Петербург</Line>
+          <Line>Симферополь</Line>
+          <Line>Адлер</Line>
+          <Line>Екатеринбург</Line>
+          <Line>Лондон</Line>
+          <Button>Все городр</Button>
+        </FaQ>
+        <FaQ>
+          <Title>АВИАКОМПАНИИ</Title>
+          <Line>Air Berlin</Line>
+          <Line>Air France</Line>
+          <Line>Alitalia</Line>
+          <Line>Air Baltic</Line>
+          <Line>Emirates</Line>
+          <Line>KLM</Line>
+          <Button>Все авиакомпании</Button>
+        </FaQ>
+        <FaQ>
+          <Title>АЭРОПОРТЫ</Title>
+          <Line>Шереметьево</Line>
+          <Line>Курумоч</Line>
+          <Line>Домодедово</Line>
+          <Line>Толмачево</Line>
+          <Line>Владивосток</Line>
+          <Line>Гамбург</Line>
+          <Button>Все аэропорты</Button>
+        </FaQ>
+        <FaQ>
+          <Title>НАПРАВЛЕНИЯ</Title>
+          <Line>MOW - SIP</Line>
+          <Line>MOW - AER</Line>
+          <Line>MOW - TIV</Line>
+          <Line>MOW - MRV</Line>
+          <Line>LED - MOW</Line>
+          <Line>MOW - BKK</Line>
+        </FaQ>
+        <FaQ>
+          <Title>СЕРВИСЫ</Title>
+          <Line>Горящие авиабилеты</Line>
+          <Line>Календарь низких цен</Line>
+          <Line>Карта низких цен</Line>
+          <Line>Спецпредложения</Line>
+          <Line>Таблица цен</Line>
+          <Line>Блог</Line>
+          <Line>Помощь</Line>
+        </FaQ>
+      </Services>
       <Delimiter />
       <PartnerInfo>
         <span>

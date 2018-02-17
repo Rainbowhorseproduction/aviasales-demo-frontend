@@ -16,6 +16,10 @@ const IconContainer = styled.div`
   position: relative;
   text-align: center;
   margin-top: 32px;
+
+  @media (min-width: 768px) {
+    margin-top: 56px;
+  }
 `;
 
 const CategoryIconBack = styled.img``;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import TicketCard from "./TicketCard.js";
+import TicketCard from "./TicketCard";
 import pobeda from "./pobeda.svg";
 import circle from "./circle.svg";
 import lufthansa from "./lufthansa.svg";

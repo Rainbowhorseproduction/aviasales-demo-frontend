@@ -1,6 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
+const Container = styled.div`
+  box-sizing: border-box;
+  @media (min-width: 1440px) {
+    width: 50%;
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+`;
+
 const CityCard = styled.div`
   background: #ffffff;
   box-shadow: 0px 2px 12px rgba(0, 75, 93, 0.12);
@@ -8,11 +17,19 @@ const CityCard = styled.div`
   margin-top: 12px;
   margin-left: 6px;
   margin-right: 6px;
+
+  @media (min-width: 768px) {
+    margin-top: 23px;
+    margin-left: 72px;
+    margin-right: 72px;
+  }
+  @media (min-width: 1440px) {
+    margin: 0;
+    margin-top: 31px;
+  }
 `;
 
-const Col = styled.div`
-  width: 50%;
-`;
+const ProductDescription = styled.div``;
 
 const CityView = styled.img`
   width: 100%;
@@ -22,13 +39,34 @@ const CityView = styled.img`
 
 const MainInfo = styled.div`
   display: flex;
+  justify-content: space-between;
 `;
 
 const DirectionInfo = styled.div`
   margin-left: 16px;
-  margin-top: 8px;
+  margin-top: 16px;
   margin-bottom: 12px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
 `;
+
+const Flag = styled.img`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    margin-right: 16px;
+  }
+`;
+
+const CityAndCountry = styled.div``;
 
 const CityName = styled.p`
   font-family: Roboto;
@@ -39,6 +77,12 @@ const CityName = styled.p`
   color: #5b5b5c;
   margin: 0;
   margin-bottom: 4px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 2px;
+    line-height: 32px;
+    font-size: 22px;
+  }
 `;
 
 const Country = styled.p`
@@ -53,7 +97,12 @@ const Country = styled.p`
 
 const DateInfo = styled.div`
   margin-right: 16px;
-  margin-top: 5px;
+  margin-top: 18px;
+
+  @media (min-width: 768px) {
+    margin-right: 16px;
+    margin-top: 12px;
+  }
 `;
 
 const Price = styled.p`
@@ -66,9 +115,15 @@ const Price = styled.p`
   color: #00bae8;
   margin: 0;
   margin-bottom: 4px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 2px;
+    line-height: 32px;
+    font-size: 22px;
+  }
 `;
 
-const Date = styled.p`
+const DateAndMonth = styled.p`
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -81,22 +136,27 @@ const Date = styled.p`
 
 export default function(props) {
   return (
-    <CityCard>
-      <CityView src={props.picture} alt="townImage" />
-      <MainInfo>
-        <Col>
-          <DirectionInfo>
-            <CityName>{props.city}</CityName>
-            <Country>{props.country}</Country>
-          </DirectionInfo>
-        </Col>
-        <Col>
-          <DateInfo>
-            <Price>Найти от {props.price.toLocaleString()}₽</Price>
-            <Date>{props.date}</Date>
-          </DateInfo>
-        </Col>
-      </MainInfo>
-    </CityCard>
+    <Container>
+      <CityCard>
+        <CityView src={props.picture} alt="townImage" />
+        <MainInfo>
+          <ProductDescription>
+            <DirectionInfo>
+              <Flag src={props.flag} alt="flag" />
+              <CityAndCountry>
+                <CityName>{props.city}</CityName>
+                <Country>{props.country}</Country>
+              </CityAndCountry>
+            </DirectionInfo>
+          </ProductDescription>
+          <ProductDescription>
+            <DateInfo>
+              <Price>Найти от {props.price.toLocaleString()}₽</Price>
+              <DateAndMonth>{props.dateMonth}</DateAndMonth>
+            </DateInfo>
+          </ProductDescription>
+        </MainInfo>
+      </CityCard>
+    </Container>
   );
 }

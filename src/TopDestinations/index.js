@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Category from "./Category.js";
+import Category from "./Category";
 import compass from "./compass.svg";
 import edit from "./edit.svg";
 import world from "./world.svg";
@@ -12,8 +12,15 @@ import stroller from "./stroller.svg";
 
 const TopDestinations = styled.div`
   background: #f8fcff;
-  padding: 40px 6px 16px;
+  padding: 28px 6px 28px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    padding: 56px 86px 38px 56px;
+  }
+  @media (min-width: 1440px) {
+    padding: 56px 413px 39px 413px;
+  }
 `;
 
 const Compass = styled.img``;
@@ -28,6 +35,12 @@ const Title = styled.p`
   color: #4a4a4a;
   margin-top: 24px;
   margin-bottom: 0px;
+
+  @media (min-width: 768px) {
+    margin-top: 20px;
+    line-height: 36px;
+    font-size: 24px;
+  }
 `;
 
 const CityButton = styled.button`
@@ -44,6 +57,11 @@ const CityButton = styled.button`
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: 768px) {
+    line-height: 36px;
+    font-size: 24px;
+  }
 `;
 
 const EditIcon = styled.img`
@@ -55,12 +73,21 @@ const Categories = styled.div`
   flex-wrap: wrap;
   magin-top: 32px;
   margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    flex-wrap: none;
+    align-items: center;
+  }
 `;
 
 const Col = styled.div`
-  width: 33.33%;
   display: flex;
+  width: 33.33%;
   justify-content: space-around;
+
+  @media (min-width: 768px) {
+    width: 16.66666%;
+  }
 `;
 
 export default function(props) {

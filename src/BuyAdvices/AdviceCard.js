@@ -25,7 +25,7 @@ const Text = styled.p`
   margin: 0;
 `;
 
-const Article = styled.div`
+const Paper = styled.div`
   display: flex;
 `;
 
@@ -39,7 +39,7 @@ const Info = styled.p`
   margin: 0;
 `;
 
-const DetailsButton = styled.span`
+const DetailsButton = styled.button`
   display: flex;
   font-family: Roboto;
   font-style: normal;
@@ -61,12 +61,12 @@ export default function(props) {
         <Picture src={props.pic} alt="picture" />
         <Text>{props.topic}</Text>
       </Title>
-      <Article>
+      <Paper>
         <Info>
           {props.text}
           <DetailsButton>{props.details}</DetailsButton>
         </Info>
-      </Article>
+      </Paper>
     </AdviceCard>
   );
 }

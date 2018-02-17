@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import MobileCard from "./MobileCard.js";
+import MobileCard from "./MobileCard";
 import star from "./star.svg";
-import telefon from "./telefon.png";
+import phone from "./phone.png";
 import apple from "./apple.svg";
 import android from "./android.svg";
 import wf from "./wf.svg";
@@ -57,7 +57,7 @@ const AppLinks = styled.div`
   align-items: center;
 `;
 
-const Telefon = styled.img`
+const Phone = styled.img`
   width: 162px;
   height: 213px;
   margin-right: 15px;
@@ -83,7 +83,7 @@ export default function(props) {
         </Rating>
       </TitleBlock>
       <AppLinks>
-        <Telefon src={telefon} alt="telefon" />
+        <Phone src={phone} alt="telefon" />
         <Col>
           <MobileCard oslink={apple} name={"iPhone или iPad"} />
           <MobileCard oslink={android} name={"Android"} />

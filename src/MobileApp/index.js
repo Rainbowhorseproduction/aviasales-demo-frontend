@@ -20,7 +20,7 @@ const TitleBlock = styled.div`
   padding: 24px 12px;
 `;
 
-const Title = styled.p`
+const Title = styled.h3`
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;

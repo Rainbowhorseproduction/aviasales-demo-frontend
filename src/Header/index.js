@@ -50,7 +50,7 @@ const Sitename = styled.p`
   }
 `;
 
-const Title = styled.p`
+const Title = styled.h1`
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;

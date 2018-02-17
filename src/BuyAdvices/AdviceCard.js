@@ -6,7 +6,7 @@ const AdviceCard = styled.div`
   padding: 8px 6px;
 `;
 
-const Title = styled.div`
+const Title = styled.h3`
   display: flex;
   margin-bottom: 12px;
 `;

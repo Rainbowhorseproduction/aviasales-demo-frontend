@@ -50,7 +50,7 @@ const Texts = styled.div`
   }
 `;
 
-const Title = styled.p`
+const Title = styled.h3`
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;

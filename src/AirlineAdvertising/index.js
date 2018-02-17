@@ -28,7 +28,7 @@ const Slider = styled.div`
   justify-content: center;
 `;
 
-const Title = styled.p`
+const Title = styled.h2`
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;

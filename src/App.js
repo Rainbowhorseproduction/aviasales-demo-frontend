@@ -10,6 +10,8 @@ import SpecialOffers from "./SpecialOffers";
 import BuyAdvices from "./BuyAdvices";
 import MobileApp from "./MobileApp";
 import Footer from "./Footer";
+import AirlineAdvertising from "./AirlineAdvertising";
+import Subscribe from "./Subscribe";
 
 class App extends Component {
   render() {
@@ -19,6 +21,8 @@ class App extends Component {
         <TopDestinations />
         <CityAdvertisings />
         <TicketPrices />
+        <AirlineAdvertising />
+        <Subscribe />
         <SpecialOffers />
         <BuyAdvices />
         <MobileApp />

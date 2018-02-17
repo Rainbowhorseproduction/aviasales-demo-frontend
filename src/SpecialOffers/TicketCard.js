@@ -1,10 +1,32 @@
 import React from "react";
 import styled from "styled-components";
 
+const CardWrapper = styled.div`
+  @media (min-width: 768px) {
+    width: 33%;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 1440px) {
+  }
+`;
+
 const TicketCard = styled.div`
   background: white;
   margin-bottom: 12px;
   padding-bottom: 16px;
+
+  @media (min-width: 768px) {
+    margin-left: 8px;
+    margin-right: 8px;
+    justify-content: space-between;
+    min-height: 270px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 34px;
+    margin-right: 34px;
+  }
 `;
 
 const MainPrice = styled.div`
@@ -116,28 +138,30 @@ const Details = styled.button`
 
 export default function(props) {
   return (
-    <TicketCard>
-      <MainPrice>
-        <MinPrice>{props.text}</MinPrice>
-        {props.alianceLogo && (
-          <CircleLogo src={props.alianceLogo} alt="Alliance logo" />
-        )}
-      </MainPrice>
-      <SubMain>
-        <MainBlock>
-          <Col>
-            <CompanyLogo src={props.logo} alt="logo" />
-          </Col>
-          <Col>
-            <Price>
-              от <PriceBig>{props.price.toLocaleString()} ₽</PriceBig>
-            </Price>
-            <OfferTimeLeft>{props.timeLeft}</OfferTimeLeft>
-          </Col>
-        </MainBlock>
-        <TitleOffer>{props.offer}</TitleOffer>
-        <Details>{props.details}</Details>
-      </SubMain>
-    </TicketCard>
+    <CardWrapper>
+      <TicketCard>
+        <MainPrice>
+          <MinPrice>{props.text}</MinPrice>
+          {props.alianceLogo && (
+            <CircleLogo src={props.alianceLogo} alt="Alliance logo" />
+          )}
+        </MainPrice>
+        <SubMain>
+          <MainBlock>
+            <Col>
+              <CompanyLogo src={props.logo} alt="logo" />
+            </Col>
+            <Col>
+              <Price>
+                от <PriceBig>{props.price.toLocaleString()} ₽</PriceBig>
+              </Price>
+              <OfferTimeLeft>{props.timeLeft}</OfferTimeLeft>
+            </Col>
+          </MainBlock>
+          <TitleOffer>{props.offer}</TitleOffer>
+          <Details>{props.details}</Details>
+        </SubMain>
+      </TicketCard>
+    </CardWrapper>
   );
 }

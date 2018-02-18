@@ -4,15 +4,28 @@ import styled from "styled-components";
 const AdviceCard = styled.div`
   background: #ffffff;
   padding: 8px 6px;
+
+  @media (min-width: 768px) {
+    padding: 12px 0px;
+  }
 `;
 
 const Title = styled.h3`
   display: flex;
+  margin: 0;
   margin-bottom: 12px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 16px;
+  }
 `;
 
 const Picture = styled.img`
   margin-right: 10px;
+
+  @media (min-width: 768px) {
+    margin-right: 8px;
+  }
 `;
 
 const Text = styled.p`

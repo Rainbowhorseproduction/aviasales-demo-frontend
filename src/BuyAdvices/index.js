@@ -6,11 +6,17 @@ import dog from "./dog.png";
 import list from "./list.png";
 
 const Advices = styled.div`
-  padding-top: 12px;
+  padding-top: 8px;
   padding-bottom: 16px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 28px;
+  }
 
   @media (min-width: 1440px) {
     padding: 0px 203px;
+    padding-top: 12px;
+    padding-bottom: 28px;
   }
 `;
 

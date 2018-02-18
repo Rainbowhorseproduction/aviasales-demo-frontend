@@ -1,9 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const MobileCard = styled.div`
+const Card = styled.div`
   display: flex;
   margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin: 0px 21px 0px 21px;
+  }
 `;
 
 const Picture = styled.img``;
@@ -21,9 +25,9 @@ const Name = styled.p`
 
 export default function(props) {
   return (
-    <MobileCard>
+    <Card>
       <Picture src={props.oslink} />
       <Name>{props.name}</Name>
-    </MobileCard>
+    </Card>
   );
 }

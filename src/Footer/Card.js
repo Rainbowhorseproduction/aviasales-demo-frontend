@@ -5,6 +5,12 @@ const Card = styled.div`
   display: flex;
   width: 33%;
   margin-bottom: 12px;
+
+  @media (min-width: 768px) {
+    width: auto;
+    margin-right: 32px;
+    margin-bottom: 0px;
+  }
 `;
 
 const Picture = styled.img`

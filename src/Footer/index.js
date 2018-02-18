@@ -12,12 +12,27 @@ import windowsstore from "./windowsstore.svg";
 
 const Footer = styled.div`
   background: #ffffff;
-  padding: 1px 6px 24px;
+  padding: 1px 0px 24px;
+
+  @media (min-width: 768px) {
+    padding: 1px 0px 24px 11px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 14px 0px 24px;
+  }
 `;
 
 const Services = styled.div`
   display: flex;
   flex-wrap: wrap;
+  padding-left: 6px;
+  padding-right: 6px;
+
+  @media (min-width: 768px) {
+    padding-left: 98px;
+    padding-right: 98px;
+  }
 `;
 
 const Title = styled.p`
@@ -35,6 +50,15 @@ const FaQ = styled.div`
   width: 50%;
   margin-top: 31px;
   padding-bottom: 8px;
+
+  @media (min-width: 768px) {
+    width: 25%;
+  }
+
+  @media (min-width: 1440px) {
+    width: 16.666%;
+    padding-bottom: 28px;
+  }
 `;
 
 const Line = styled.p`
@@ -53,18 +77,45 @@ const Delimiter = styled.div`
   border-top: 1px solid #e0e6e8;
 `;
 
-const PartnerInfo = styled.div`
+const BottomBlock = styled.div`
   padding-top: 24px;
+  padding-left: 6px;
+  padding-right: 6px;
+
+  @media (min-width: 768px) {
+    padding-left: 98px;
+    padding-right: 98px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+const PartnerInfo = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
 
-const FooterLinksList = styled.ul`
+const LinksList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   text-align: left;
-  padding-top: 16px;
-  padding-bottom: 12px;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
+    padding-left: 0px;
+    margin-top: 17px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: 1440px) {
+  }
 `;
 
 const About = styled.p`
@@ -92,19 +143,34 @@ const HotelLookLink = styled.p`
   color: #5b5b5c;
   margin: 0;
   margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;
 
-const MobileStores = styled.div`
+const Stores = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1440px) {
+  }
 `;
 
 const Store = styled.img`
   margin-bottom: 8px;
+
+  @media (min-width: 768px) {
+    margin-right: 10px;
+  }
 `;
 
-const FooterCopy = styled.p`
+const Copyright = styled.p`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -114,6 +180,14 @@ const FooterCopy = styled.p`
   margin: 0;
   margin: 24px 0px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+
+  @media (min-width: 1440px) {
+    text-align: right;
+  }
 `;
 
 const Button = styled.button`
@@ -195,31 +269,35 @@ export default function(props) {
         </FaQ>
       </Services>
       <Delimiter />
-      <PartnerInfo>
-        <About>О компании</About>
-        <About>Партнёрская программа</About>
-        <About>Реклама</About>
-        <About>Вакансии</About>
-        <About>Помощь</About>
-        <About>Правила</About>
-        <About>White Label авиабилеты</About>
-      </PartnerInfo>
-      <FooterLinksList>
-        <Card oslink={vk} name={"Вконтакте"} />
-        <Card oslink={facebook} name={"Фейсбук"} />
-        <Card oslink={instagram} name={"Инстаграм"} />
-        <Card oslink={twitter} name={"Твиттер"} />
-        <Card oslink={viber} name={"Вайбер"} />
-      </FooterLinksList>
-      <EndBlock>
-        <HotelLookLink>Поиск и бронирование отелей</HotelLookLink>
-        <MobileStores>
-          <Store src={appstore} atl="appstore" />
-          <Store src={googleplay} atl="googleplay" />
-          <Store src={windowsstore} atl="windowsstore" />
-        </MobileStores>
-        <FooterCopy>© 2007-2018, Aviasales - дешевые авиабилеты</FooterCopy>
-      </EndBlock>
+      <BottomBlock>
+        <div>
+          <PartnerInfo>
+            <About>О компании</About>
+            <About>Партнёрская программа</About>
+            <About>Реклама</About>
+            <About>Вакансии</About>
+            <About>Помощь</About>
+            <About>Правила</About>
+            <About>White Label авиабилеты</About>
+          </PartnerInfo>
+          <LinksList>
+            <Card oslink={vk} name={"Вконтакте"} />
+            <Card oslink={facebook} name={"Фейсбук"} />
+            <Card oslink={instagram} name={"Инстаграм"} />
+            <Card oslink={twitter} name={"Твиттер"} />
+            <Card oslink={viber} name={"Вайбер"} />
+          </LinksList>
+          <HotelLookLink>Поиск и бронирование отелей</HotelLookLink>
+        </div>
+        <EndBlock>
+          <Stores>
+            <Store src={appstore} atl="appstore" />
+            <Store src={googleplay} atl="googleplay" />
+            <Store src={windowsstore} atl="windowsstore" />
+          </Stores>
+          <Copyright>© 2007-2018, Aviasales - дешевые авиабилеты</Copyright>
+        </EndBlock>
+      </BottomBlock>
     </Footer>
   );
 }
